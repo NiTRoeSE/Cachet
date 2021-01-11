@@ -10,7 +10,8 @@
  */
 
 return [
-    'Thanks' => 'Danke für ihr Verständniss',
+    'th' => 'ten',
+    'Thanks,' => 'Danke für ihr Verständnis',
     'component' => [
         'status_update' => [
             'mail' => [
