@@ -50,7 +50,7 @@ class SubscribeRoutes
 
             $router->get('subscribe/manage/{code}', [
                 'as'         => 'get:subscribe.manage',
-                'middleware' => ['signed'],
+                /**'middleware' => ['signed'],**/
                 'uses'       => 'SubscribeController@showManage',
             ]);
             $router->post('subscribe/manage/{code}', [
@@ -60,7 +60,7 @@ class SubscribeRoutes
 
             $router->get('subscribe/verify/{code}', [
                 'as'         => 'get:subscribe.verify',
-                'middleware' => ['signed'],
+                /**'middleware' => ['signed'],**/
                 'uses'       => 'SubscribeController@getVerify',
             ]);
 
