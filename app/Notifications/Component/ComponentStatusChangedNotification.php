@@ -89,9 +89,11 @@ class ComponentStatusChangedNotification extends Notification
                 'componentName'          => $this->component->name,
                 'content'                => $content,
                 'unsubscribeText'        => trans('cachet.subscriber.unsubscribe'),
-                'unsubscribeUrl'         => cachet_route('subscribe.unsubscribe', $notifiable->verify_code),
+                /**'unsubscribeUrl'         => cachet_route('subscribe.unsubscribe', $notifiable->verify_code),**/
+                'unsubscribeUrl'         => 'https://status.jsp.jena.de'.'subscribe.unsubscribe'.$notifiable->verify_code,
                 'manageSubscriptionText' => trans('cachet.subscriber.manage_subscription'),
-                'manageSubscriptionUrl'  => cachet_route('subscribe.manage', $notifiable->verify_code),
+                /**'manageSubscriptionUrl'  => cachet_route('subscribe.manage', $notifiable->verify_code),**/
+                'manageSubscriptionUrl' => 'https://status.jsp.jena.de/'.'subscribe.manage'.$notifiable->verify_code,
             ]);
     }
 
